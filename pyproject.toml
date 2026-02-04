@@ -1,0 +1,10 @@
+[project]
+name = "pruebas-de-software"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pylint>=4.0.4",
+    "pytest>=9.0.2",
+]
