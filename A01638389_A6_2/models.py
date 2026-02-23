@@ -7,7 +7,7 @@ from dataclasses import dataclass
 @dataclass
 class Hotel:
     """
-    Docstring for Hotel
+    Hotel class for reservation system
     """
     def __init__(self, hotel_id: str, name: str, rooms: int,
                  available_rooms: int):
@@ -18,9 +18,9 @@ class Hotel:
 
     def asdict(self) -> dict:
         """
-        Docstring for asdict
+        Returns a dictionary with object attributes
 
-        :return: Description
+        :return: Object created as dictionary
         :rtype: dict
         """
         return {self.id: {"name": self.name, "rooms": self.rooms,
@@ -30,7 +30,7 @@ class Hotel:
 @dataclass
 class Customer:
     """
-    Docstring for Customer
+    Customer class for reservation system
     """
     def __init__(self, cust_id: str, name: str, cellphone: str):
         self.id = cust_id
@@ -39,9 +39,9 @@ class Customer:
 
     def asdict(self) -> dict:
         """
-        Docstring for asdict
+        Returns a dictionary with object attributes
 
-        :return: Description
+        :return: Object created as dictionary
         :rtype: dict
         """
         return {self.id: {"name": self.name, "cellphone": self.cellphone}}
@@ -50,7 +50,7 @@ class Customer:
 @dataclass
 class Reservation:
     """
-    Docstring for Reservation
+    Reservation class for reservation system
     """
     def __init__(self, rsv_id: str, hotel_id: str, customer_id: str):
         self.id = rsv_id
@@ -59,9 +59,9 @@ class Reservation:
 
     def asdict(self) -> dict:
         """
-        Docstring for asdict
+        Returns a dictionary with object attributes
 
-        :return: Description
+        :return: Object created as dictionary
         :rtype: dict
         """
         return {self.id: {"hotel_id": self.hotel_id,
