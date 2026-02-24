@@ -21,9 +21,9 @@ class ReservationManager:
         """
         Creates a new reservation in the system
 
-        :param hotel_name:
+        :param hotel_name: Name of the hotel
         :type hotel_name: str
-        :param customer_name:
+        :param customer_name: Customer name
         :type customer_name: str
         """
 
@@ -141,12 +141,11 @@ class HotelManager:
         """
         Docstring for create_hotel
 
-        :param self: Description
-        :param h_name: Description
+        :param h_name: Hotel name
         :type h_name: str
-        :param h_rooms: Description
+        :param h_rooms: Quantity of rooms
         :type h_rooms: int
-        :param h_available: Description
+        :param h_available: Quantity of rooms available
         :type h_available: int
         """
         self.id += 1
@@ -164,12 +163,11 @@ class HotelManager:
 
         print(f"Hotel with id {self.id} successfully created")
 
-    def delete_hotel(self, h_id):
+    def delete_hotel(self, h_id: str):
         """
-        Docstring for delete_hotel
+        Delete an hotel from the system
 
-        :param self: Description
-        :param h_id: Description
+        :param h_id: Hotel ID
         """
         try:
             hotel_info = self.file_manager.read_file(self.hotel_filename)
@@ -196,12 +194,11 @@ class HotelManager:
 
     def get_info(self, h_name: str) -> str:
         """
-        Docstring for get_info
+        Get information from an hotel
 
-        :param self: Description
-        :param h_name: Description
+        :param h_name: Hotel name
         :type h_name: str
-        :return: Description
+        :return: Hotel ID
         :rtype: str
         """
         try:
@@ -235,10 +232,9 @@ class CustomerManager:
         """
         Create new customer in system
 
-        :param self: Description
-        :param c_name: Description
+        :param c_name: Customer name
         :type c_name: str
-        :param c_cellphone: Description
+        :param c_cellphone: Customer cellphone
         :type c_cellphone: str
         """
         self.id += 1
@@ -259,10 +255,9 @@ class CustomerManager:
 
     def delete_customer(self, c_id: str):
         """
-        Docstring for delete_customer
+        Delete customer from system
 
-        :param self: Description
-        :param c_id: Description
+        :param c_id: Customer ID
         :type c_id: str
         """
         try:
@@ -292,12 +287,11 @@ class CustomerManager:
 
     def get_info(self, c_name: str) -> str:
         """
-        Docstring for get_info
+        Get information from a customer
 
-        :param self: Description
-        :param c_name: Description
+        :param c_name: Customer name
         :type c_name: str
-        :return: Description
+        :return: Customer ID
         :rtype: str
         """
         try:
